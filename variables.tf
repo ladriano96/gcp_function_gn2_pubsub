@@ -25,6 +25,23 @@ variable "retry_policy" {
 
 
 
+variable "storage_bucket_object_name" {
+  description = "the object name"
+  type        = string
+  default     = "code-functions"
+}
+
+
+
+variable "storage_bucket_object_source" {
+  description = "the object source"
+  type        = string
+  default     = "code-functions/index.zip"
+}
+
+
+
+
 
 variable "region_name" {
   description = "the name region"
