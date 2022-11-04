@@ -1,7 +1,6 @@
 variable "project_id" {
   description = "the name project id"
   type        = string
-  default     = "pj-ladriano-cloud"
 }
 
 
@@ -10,7 +9,6 @@ variable "project_id" {
 variable "env" {
   description = "the environment name"
   type        = string
-  default     = "dev"
 }
 
 
@@ -25,13 +23,28 @@ variable "retry_policy" {
 
 
 
+variable "storage_bucket_object_name" {
+  description = "the object name"
+  type        = string
+  default     = "code-functions"
+}
+
+
+
+variable "storage_bucket_object_source" {
+  description = "the object source"
+  type        = string
+  default     = "code-functions/index.zip"
+}
+
+
+
+
 
 variable "region_name" {
   description = "the name region"
   type        = string
-  default     = "southamerica-east1"
 }
-
 
 
 
@@ -60,7 +73,6 @@ variable "runtime_type" {
 variable "entry_point_name" {
   description = "the name entry point"
   type        = string
-  default     = "hello_world"
 }
 
 
@@ -185,8 +197,6 @@ variable "pub_sub_g2" {
 variable "pub_sub_topic" {
   description = "the pub/sub topic primary generation name "
   type        = string
-  default     = "projects/pj-ladriano-cloud/topics/topic-functions"
-
 }
 
 
